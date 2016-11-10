@@ -1,0 +1,34 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`full-calendar`
+Use arshaw fullcalendar in polymer
+
+@demo demo/index.html 
+-->
+
+<dom-module id="full-calendar">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'full-calendar',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'full-calendar',
+        },
+      },
+
+    });
+  </script>
+</dom-module>

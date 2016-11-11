@@ -16,13 +16,15 @@
       <template>
         <full-calendar></full-calendar>
       </template>
-    </test-fixture>
+    </test-fixture>+
 
-    <test-fixture id="basic-init-data">
+
+    <test-fixture id="basic-with-init">
       <template>
         <full-calendar init={{init}}></full-calendar>
       </template>
     </test-fixture>
+
 
     <script>
       suite('full-calendar', function() {
@@ -32,10 +34,6 @@
           assert.equal(element.is, 'full-calendar');
         });
 
-        test('instantiating the element works', function() {
-          var element = fixture('basic-init-data');
-          assert.equal(element.is, 'full-calendar');
-        });
 
       });
     </script>

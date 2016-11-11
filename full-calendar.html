@@ -35,9 +35,13 @@ Use arshaw fullcalendar in polymer
         },
       },
 
+
+      ready: function() {
+        $(this.$.calendar).fullCalendar(this.init);    
+      },
+
       attached: function(){
-        console.log(this.init);
-        $(this.$.calendar).fullCalendar(this.init);     
+        $(this.$.calendar).fullCalendar('render');     
       },
 
     });

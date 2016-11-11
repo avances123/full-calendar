@@ -1,5 +1,9 @@
 <link rel="import" href="../polymer/polymer.html">
 
+<script src="../jquery/dist/jquery.min.js"></script>
+<script src="../moment/min/moment.min.js"></script>
+<script src="../fullcalendar/fullcalendar.js"></script>
+<!--<script src="../fullcalendar/dist/fullcalendar.min.js"></script>-->
 <!--
 `full-calendar`
 Use arshaw fullcalendar in polymer
@@ -8,13 +12,15 @@ Use arshaw fullcalendar in polymer
 -->
 
 <dom-module id="full-calendar">
+  <link rel="import" type="css" href="../fullcalendar/dist/fullcalendar.css">
   <template>
     <style>
       :host {
         display: block;
       }
+
     </style>
-    <h2>Hello [[prop1]]</h2>
+    <div id='calendar'></div>
   </template>
 
   <script>
@@ -27,6 +33,10 @@ Use arshaw fullcalendar in polymer
           type: String,
           value: 'full-calendar',
         },
+      },
+
+      attached: function(){
+        $(this.$.calendar).fullCalendar({});        
       },
 
     });

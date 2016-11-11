@@ -22,15 +22,14 @@
     </style>
   </head>
   <body>
-
-    <!--<div class="vertical-section-container centered">
-      <h3>Basic full-calendar Demo</h3>
-      <demo-snippet>
-        <template>-->
-          <full-calendar></full-calendar>
-        <!--</template>
-      </demo-snippet>
-    </div>-->
-
+    <template is="dom-bind" id="scope1">
+      <!--<full-calendar init={{init}}></full-calendar>-->
+      <full-calendar></full-calendar>
+    </template>
+    <script>
+      var scope = document.getElementById('scope1');
+      scope.init = { prop1: 'kakota'}
+      scope.events = [1, 2, 3];
+    </script>
   </body>
 </html>

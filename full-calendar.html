@@ -29,14 +29,15 @@ Use arshaw fullcalendar in polymer
       is: 'full-calendar',
 
       properties: {
-        prop1: {
-          type: String,
-          value: 'full-calendar',
+        init: {
+          type: Object,
+          value: function() { return {}; }
         },
       },
 
       attached: function(){
-        $(this.$.calendar).fullCalendar({});        
+        console.log(this.init);
+        $(this.$.calendar).fullCalendar(this.init);     
       },
 
     });
